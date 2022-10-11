@@ -1,0 +1,28 @@
+Source: libtest-deep-fuzzy-perl
+Section: perl
+Priority: optional
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Nick Morrott <knowledgejunkie@gmail.com>
+Build-Depends: debhelper (>= 9.20140227~),
+               libmodule-build-tiny-perl,
+               perl
+Build-Depends-Indep: libmath-round-perl,
+                     libtest-deep-perl
+Standards-Version: 3.9.8
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libtest-deep-fuzzy-perl.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-perl/packages/libtest-deep-fuzzy-perl.git
+Homepage: https://metacpan.org/release/Test-Deep-Fuzzy
+Testsuite: autopkgtest-pkg-perl
+
+Package: libtest-deep-fuzzy-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libmath-round-perl,
+         libtest-deep-perl
+Description: fuzzy number comparison with Test::Deep
+ Test::Deep::Fuzzy provides fuzzy number comparison with Test::Deep.
+ .
+ A value under test is compared against an expected value and a
+ specified range. Math::Round::nearest() is used to round the value
+ before comparison against the expected value.
